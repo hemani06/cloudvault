@@ -8,7 +8,11 @@ connectDB();
 const app = express();
 const protectedRoutes = require("./routes/protectedRoutes");
 const fileRoutes = require("./routes/fileRoutes");
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoutes);
