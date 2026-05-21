@@ -21,7 +21,7 @@ function App() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/files/upload",
+        "https://cloudvault-backend-nv2d.onrender.com/api/files/upload",
         formData,
         {
           headers: {
